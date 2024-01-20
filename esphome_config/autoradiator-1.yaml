@@ -1,0 +1,39 @@
+#<<: !include ./secrets.yaml // implied
+
+esphome:
+  name: autoradiator-1
+
+esp8266:
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret hapwd
+
+ota:
+  password: !secret hapwd
+
+wifi:
+  ssid: !secret wifissid
+  password: !secret wifipwd
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Autoradiator-1 Fallback Hotspot"
+    password: !secret oopspwd
+
+web_server:
+  port: 80
+
+captive_portal:
+
+switch:
+  - platform: gpio 
+    pin: D7  #D7
+    name: MotorIN1
+  - platform: gpio 
+    pin: D6  #D6
+    name: MotorIN2
