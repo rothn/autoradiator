@@ -25,15 +25,52 @@ wifi:
     ssid: "Autoradiator-1 Fallback Hotspot"
     password: !secret oopspwd
 
+  manual_ip:
+    static_ip: 192.168.50.79
+    gateway: 192.168.50.1
+    subnet: 255.255.255.0
+    dns1: 192.168.50.1
+
 web_server:
   port: 80
 
 captive_portal:
 
+sensor:
+  - platform: adc
+    pin: A0
+    name: "Temperature"
+    id: "Temperature"
+    unit_of_measurement: "°C"
+    update_interval: 500ms
+    filters:
+      - multiply: 330
+
 switch:
   - platform: gpio 
     pin: D7  #D7
     name: MotorIN1
+    id: MotorIN1
   - platform: gpio 
     pin: D6  #D6
     name: MotorIN2
+    id: MotorIN2
+
+
+climate:
+  - platform: bang_bang
+    name: "Radiator"
+    sensor: "Temperature"
+    default_target_temperature_low: 20 °C
+    default_target_temperature_high: 22 °C
+
+    heat_action:
+      - switch.turn_on: MotorIN1
+      - switch.turn_off: MotorIN2
+      - delay: 10s
+      - switch.turn_off: MotorIN1
+    idle_action:
+      - switch.turn_on: MotorIN2
+      - switch.turn_off: MotorIN1
+      - delay: 10s
+      - switch.turn_off: MotorIN2
