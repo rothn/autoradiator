@@ -1059,7 +1059,7 @@
     (property "Reference" "R4" (id 0) (at 144.78 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0R" (id 1) (at 144.78 88.9 0)
+    (property "Value" "NOT POPULATED" (id 1) (at 148.3305 86.5695 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 141.732 87.63 90)
@@ -1078,7 +1078,7 @@
     (property "Reference" "R3" (id 0) (at 139.7 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0R" (id 1) (at 139.7 88.9 0)
+    (property "Value" "NOT POPULATED" (id 1) (at 139.6319 92.764 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 136.652 87.63 90)
@@ -1303,10 +1303,10 @@
       (reference "R2") (unit 1) (value "1R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/6b75a637-4290-458e-9ca9-7a947f5ae499"
-      (reference "R3") (unit 1) (value "0R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R3") (unit 1) (value "NOT POPULATED") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/620e207a-b9e2-4c26-9cff-8d1c6e6f6803"
-      (reference "R4") (unit 1) (value "0R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R4") (unit 1) (value "NOT POPULATED") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/92d38b6e-10bb-4476-90f2-2e4d27e77bb1"
       (reference "U1") (unit 1) (value "ChineseDCDCBoard") (footprint "Library:SRT_MPT1584EN_Module")

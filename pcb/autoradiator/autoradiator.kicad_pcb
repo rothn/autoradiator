@@ -850,9 +850,6 @@
   )
 
   (gr_rect (start 96.52 111.76) (end 30.48 68.58) (layer "Edge.Cuts") (width 0.1) (fill none) (tstamp 9ba9a88f-477b-4799-874b-0a416ca8c884))
-  (gr_text "WayWayWay" (at 35.56 109.22) (layer "F.SilkS") (tstamp 3ea36fca-bf1f-4f32-9a81-8e449cd4fdbf)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
   (gr_text "Autoradiator-- nicholasroth.net" (at 43.581293 70.217342) (layer "F.SilkS") (tstamp b8b3c052-bb8a-4282-8a5e-a8ec0b70d566)
     (effects (font (size 1 1) (thickness 0.15)))
   )
