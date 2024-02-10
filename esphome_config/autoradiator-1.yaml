@@ -58,12 +58,12 @@ switch:
 
 
 climate:
-  - platform: bang_bang
+  - platform: thermostat
     name: "Radiator"
     sensor: "Temperature"
-    default_target_temperature_low: 20 °C
-    default_target_temperature_high: 22 °C
-
+    min_heating_off_time: 1s
+    min_heating_run_time: 1s
+    min_idle_time: 1s
     heat_action:
       - switch.turn_on: MotorIN1
       - switch.turn_off: MotorIN2
@@ -72,5 +72,9 @@ climate:
     idle_action:
       - switch.turn_on: MotorIN2
       - switch.turn_off: MotorIN1
-      - delay: 10s
+      - delay: 11s
       - switch.turn_off: MotorIN2
+    default_preset: Home
+    preset:
+      - name: Home
+        default_target_temperature_low: 20 °C
